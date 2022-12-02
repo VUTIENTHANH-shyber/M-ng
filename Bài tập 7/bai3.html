@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//     Viết một chương trình nhập vào một chuỗi và chuyển các ký tự chữ thường trong chuỗi vừa nhập sang thành dạng chữ hoa. 
+let string = prompt("Enter a string: ");
+        let result = "";
+        for (let i = 0; i < string.length; i++) {
+            if (string[i] == string[i].toLowerCase()) {
+                result += string[i].toUpperCase();
+            }
+            else {
+                result += string[i];
+            }
+        }
+        alert(result);
+    </script>
+</body>
+</html>

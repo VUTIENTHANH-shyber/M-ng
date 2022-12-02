@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <center>Typeof anthing slowly
+   <form name="name">
+    <textarea name="txt" cols="50" rows="10" onkeyup="typeTextarea()"></textarea>
+   </form>
+</center>
+    <script>
+
+let i = 0;
+    function typeTextarea() {
+        document.name.txt.value = array[i];
+        i++;
+        if (i == array.length) {
+            i = 0;
+        }
+    }
+    setInterval(typeTextarea, 1000);
+    </script>
+        
+   
+</body>
+</html>

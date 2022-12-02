@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Xây dựng game caro đơn giản sử dụng mảng 2 chiều, người thắng có 3 liên tiếp giống nhau theo chiều dọc, ngang, chéo
+        let board = [
+            ["", "", ""],
+            ["", "", ""],
+            ["", "", ""]
+        ];
+        let player = "X";
+        let count = 0;
+        while (true) {
+            let row = Number(prompt("Enter row (0, 1, 2): "));
+            let col = Number(prompt("Enter col (0, 1, 2): "));
+            if (board[row][col] == "") {
+                board[row][col] = player;
+                count++;
+            }
+            else {
+                alert("Position is not empty");
+                continue;
+            }
+            // Check win
+            // Check row
+            if (board[row][0] == player && board[row][1] == player && board[row][2] == player) {
+                alert(player + " win");
+                break;
+            }
+            // Check col
+            if (board[0][col] == player && board[1][col] == player && board[2][col] == player) {
+                alert(player + " win");
+                break;
+            }
+            // Check diagonal
+            if (board[0][0] == player && board[1][1] == player && board[2][2] == player) {
+                alert(player + " win");
+                break;
+            }
+            if (board[0][2] == player && board[1][1] == player && board[2][0] == player) {
+                alert(player + " win");
+                break;
+            }
+            if (count == 9) {
+                alert("Draw");
+                break;
+            }
+            // Change player
+            if (player == "X") {
+                player = "O";
+            }
+            else {
+                player = "X";
+            }
+        }
+     
+
+    
+       
+    </script>
+</body>
+</html>
